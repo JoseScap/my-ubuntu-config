@@ -86,3 +86,27 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ```bash
 sudo docker run hello-world
 ```
+
+5. Enter the command below to create the docker group on the system.
+
+```bash
+sudo groupadd -f docker
+```
+
+6. Type the following usermod command to add the active user to the docker group.
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+7. Apply the group changes to the current terminal session by typing:
+
+```bash
+newgrp docker
+```
+
+8. Check if the docker group is in the list of user groups.
+
+```bash
+groups
+```
